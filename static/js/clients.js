@@ -23,7 +23,6 @@ clientMgr.controller('clientController', function($scope, $http) {
                 }},
         headers : { 'Content-Type': 'application/json' }
       }).then(function(resp){
-        console.log(resp.data);
         client.verified = resp.data[0].status;
       }, function(resp){
         console.log(resp.status);

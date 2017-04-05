@@ -22,4 +22,4 @@ block content
             .button-container
               button.verify-btn(ng-click='verifyClient(client)') Verify
             .verified-container
-              .verified {{client.verified==0 ? "":(client.verified==1 ? "Verified" : "Unverified")}}
+              .verified(class='{{client.verified==0 ? "unchecked":(client.verified==1 ? "good" : "bad")}}') {{client.verified==0 ? "":(client.verified==1 ? "Verified" : "Unverified")}}

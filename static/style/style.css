@@ -121,6 +121,14 @@
   justify-content: space-around;
 }
 
+.verified.good {
+  background-color: green;
+}
+
+.verified.bad {
+  background-color: red;
+}
+
 @media (max-width: 680px) {
   .item-container {
     flex-direction: column;
