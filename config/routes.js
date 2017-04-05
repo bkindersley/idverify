@@ -16,7 +16,12 @@ router.post('/login', function(req,res){
 
 //serving pages
 router.get('/', function (req, res) {
-  res.render('index');
+  if (req.cookies.loggedIn){
+    res.redirect('/clients');
+  }
+  else {
+    res.render('index');
+  }
 });
 
 router.get('/clients', function (req, res) {
