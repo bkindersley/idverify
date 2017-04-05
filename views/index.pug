@@ -1,0 +1,16 @@
+extends common/layout.pug
+
+block title
+  title Login Page
+
+block content
+  .page-content
+    h1.page-text Welcome!
+    form.login-form(name='form', action='/login', novalidate, method = 'post')
+      .form-container
+        label.form-label(for="uname") User Name
+        input.login-form#uname(type='text', name = 'uname', required = '')
+
+        label.form-label(for="pw") Password
+        input.login-form#lname(type='password', name = 'pw', required = '')
+      button.form-submit(type="submit") Submit

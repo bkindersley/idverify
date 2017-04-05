@@ -1,0 +1,25 @@
+extends common/layout.pug
+
+block title
+  title Clients
+
+block content
+  .page-content
+    .list-container(ng-controller='clientController')
+      ul.items-list
+        li.item-container(ng-show="!clientsList.length") No Clients to Display
+        li.item-container(ng-repeat='client in clientsList')
+            .client-details
+              .client-field
+                p.label First Name
+                p.value {{client.firstName}}
+              .client-field
+                p.label Last Name
+                p.value {{client.lastName}}
+              .client-field
+                p.label Date Of Birth
+                p.value {{client.dateOfBirth}}
+            .button-container
+              button.verify-btn(ng-click='verifyClient(client)') Verify
+            .verified-container
+              .verified {{client.verified==0 ? "":(client.verified==1 ? "Verified" : "Unverified")}}

@@ -1,0 +1,16 @@
+doctype html
+
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js')
+    script(src = '/js/clients.js')
+    link(rel="stylesheet", href="/style/style.css")
+    block title
+      title Page
+
+  body(ng-app='clients')
+    div.page-container
+      include banner.pug
+
+      block content
